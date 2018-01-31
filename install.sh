@@ -64,6 +64,10 @@ done
 
 if [ $(dpkg-query -W -f='${Status}' dkms 2>/dev/null | grep -c "ok installed") -eq 0 ];
 then
+	echo "Package 'dkms' is not installed."
+	echo "Installing dkms for you."
+	echo "INSTALLATION FAILED!"
+	sudo apt update
 	sudo apt-get install dkms -y
 else
 	sudo cp -R . /usr/src/rtl8812AU_linux-4.3.8
