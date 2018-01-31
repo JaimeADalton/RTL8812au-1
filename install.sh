@@ -66,7 +66,6 @@ if [ $(dpkg-query -W -f='${Status}' dkms 2>/dev/null | grep -c "ok installed") -
 then
 	echo "Package 'dkms' is not installed."
 	echo "Installing dkms for you."
-	echo "INSTALLATION FAILED!"
 	sudo apt update
 	sudo apt-get install dkms -y
 else
