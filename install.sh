@@ -78,6 +78,6 @@ else
 	echo "The Setup Script is completed !"
 	echo "##################################################"
 fi
-apt install realtek-rtl88xxau-dkms
+apt install rtl8812au-dkms
 modprobe -a 8812au
 
